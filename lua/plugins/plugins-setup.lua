@@ -38,6 +38,7 @@ local plugins = {
 
   "numToStr/Comment.nvim", -- gcc和gc注释
   "windwp/nvim-autopairs", -- 自动补全括号
+  "HiPhish/rainbow-delimiters.nvim",
 
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
