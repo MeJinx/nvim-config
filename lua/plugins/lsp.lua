@@ -19,7 +19,8 @@ require("mason-lspconfig").setup({
     "cmake",
     "markdown_oxide",
     "pylsp",
-    "pyright"
+    "pyright",
+    "autotools_ls",
   },
 })
 
