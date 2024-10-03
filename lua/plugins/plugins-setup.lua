@@ -17,10 +17,10 @@ local plugins = {
   "nvim-lualine/lualine.nvim",  -- 状态栏
   "nvim-tree/nvim-tree.lua",  -- 文档树
   "nvim-tree/nvim-web-devicons", -- 文档树图标
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
 
   "christoomey/vim-tmux-navigator", -- 用ctl-hjkl来定位窗口
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
-  "p00f/nvim-ts-rainbow", -- 配合treesitter，不同括号颜色区分
 
   {
     "williamboman/mason.nvim",
@@ -38,17 +38,17 @@ local plugins = {
 
   "numToStr/Comment.nvim", -- gcc和gc注释
   "windwp/nvim-autopairs", -- 自动补全括号
-  "HiPhish/rainbow-delimiters.nvim",
+  "HiPhish/rainbow-delimiters.nvim", --彩色括号
 
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
-  "onsails/lspkind.nvim",
-
+  "onsails/lspkind.nvim", --vscode式的自动补全框
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1', -- 文件检索
-    dependencies = { {'nvim-lua/plenary.nvim'} } -- requires要改为dependencies
-  },
-
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+-- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  }
+ 
 }
 local opts = {} -- 注意要定义这个变量
 
