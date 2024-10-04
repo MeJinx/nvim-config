@@ -21,6 +21,9 @@ local plugins = {
 
   "christoomey/vim-tmux-navigator", -- 用ctl-hjkl来定位窗口
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
+  "neovim/pynvim", --py的接口依赖
+  "simnalamburt/vim-mundo",--先前修改的列表
+  "pocco81/auto-save.nvim",
 
   {
     "williamboman/mason.nvim",
