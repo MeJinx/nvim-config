@@ -1,17 +1,8 @@
--- lsp/nonels.lua
--- 即使是采用了 none-ls, 这里也是获取 null-ls
-local status, null_ls = pcall(require, "null-ls")
-if not status then
-	vim.notify("没有找到 null-ls")
-	return
-end
-
-local formatters = null.builtins.format
+local null_ls = require("null-ls")
 
 null_ls.setup({
     sources = {
-        -- Stylua
-        formatters.stylua,
-        -- 其他 formatter 方式
+        null_ls.builtins.formatting.stylua,
+        require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
     },
 })
