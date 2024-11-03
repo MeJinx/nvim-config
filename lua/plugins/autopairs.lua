@@ -1,3 +1,4 @@
+    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
 local npairs_ok, npairs = pcall(require, "nvim-autopairs")
 if not npairs_ok then
   return
