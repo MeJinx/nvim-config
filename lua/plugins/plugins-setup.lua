@@ -46,6 +46,7 @@ local plugins = {
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
   "onsails/lspkind.nvim", --vscode式的自动补全框
+  "nvimtools/none-ls.nvim", --格式化代码
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                              , branch = '0.1.x',
