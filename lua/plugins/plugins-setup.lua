@@ -19,7 +19,6 @@ local plugins = {
   "nvim-tree/nvim-web-devicons", -- 文档树图标
   { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
 
-  "christoomey/vim-tmux-navigator", -- 用ctl-hjkl来定位窗口
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
   "neovim/pynvim", --py的接口依赖
   "simnalamburt/vim-mundo",--先前修改的列表
@@ -46,6 +45,7 @@ local plugins = {
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
   "onsails/lspkind.nvim", --vscode式的自动补全框
+  "christoomey/vim-tmux-navigator",
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                              , branch = '0.1.x',
