@@ -24,7 +24,7 @@ local plugins = {
   "neovim/pynvim", --py的接口依赖
   "simnalamburt/vim-mundo",--先前修改的列表
   "pocco81/auto-save.nvim",
-
+  "nvimtools/none-ls.nvim", --格式化代码
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim", -- 这个相当于mason.nvim和lspconfig的桥梁
@@ -46,7 +46,6 @@ local plugins = {
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
   "onsails/lspkind.nvim", --vscode式的自动补全框
-  "nvimtools/none-ls.nvim", --格式化代码
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                              , branch = '0.1.x',

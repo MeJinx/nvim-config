@@ -16,7 +16,6 @@ local servers = {
     "markdown_oxide",
     "pylsp",
     "pyright",
-    "ccls",
     "cssls",
     "html",
     "biome",
