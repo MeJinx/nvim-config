@@ -19,6 +19,7 @@ local servers = {
     "cssls",
     "html",
     "biome",
+    "shellchechout",
 }
 
 require("mason-lspconfig").setup({
