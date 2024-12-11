@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
+  "github/copilot.vim",
   "folke/tokyonight.nvim", -- 主题
   "nvim-lualine/lualine.nvim",  -- 状态栏
   "nvim-tree/nvim-tree.lua",  -- 文档树
