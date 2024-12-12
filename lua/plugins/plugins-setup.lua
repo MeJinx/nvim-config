@@ -48,18 +48,17 @@ local plugins = {
         },
     },
     "nvim-tree/nvim-web-devicons", -- 文件树图标
-    "github/copilot.vim",        --github copilot
-    "folke/tokyonight.nvim",     -- 主题
-    "nvim-lualine/lualine.nvim", -- 状态栏
-    "nvim-tree/nvim-tree.lua",   -- 文档树
-    "nvim-tree/nvim-web-devicons", -- 文档树图标
+    "github/copilot.vim",          --github copilot
+    "folke/tokyonight.nvim",       -- 主题
+    "nvim-lualine/lualine.nvim",   -- 状态栏
+    "nvim-tree/nvim-tree.lua",     -- 文档树
     { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
 
     "nvim-treesitter/nvim-treesitter", -- 语法高亮
-    "neovim/pynvim",                 --py的接口依赖
-    "simnalamburt/vim-mundo",        --先前修改的列表
+    "neovim/pynvim",                   --py的接口依赖
+    "simnalamburt/vim-mundo",          --先前修改的列表
     "pocco81/auto-save.nvim",
-    "nvimtools/none-ls.nvim",        --格式化代码
+    "nvimtools/none-ls.nvim",          --格式化代码
     {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim", -- 这个相当于mason.nvim和lspconfig的桥梁
@@ -72,16 +71,16 @@ local plugins = {
     "L3MON4D3/LuaSnip", -- snippets引擎，不装这个自动补全会出问题
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
-    "hrsh7th/cmp-path",              -- 文件路径
+    "hrsh7th/cmp-path",                -- 文件路径
 
-    "numToStr/Comment.nvim",         -- gcc和gc注释
-    "windwp/nvim-autopairs",         -- 自动补全括号
+    "numToStr/Comment.nvim",           -- gcc和gc注释
+    "windwp/nvim-autopairs",           -- 自动补全括号
     "HiPhish/rainbow-delimiters.nvim", --彩色括号
 
-    "akinsho/bufferline.nvim",       -- buffer分割线
-    "lewis6991/gitsigns.nvim",       -- 左则git提示
-    "onsails/lspkind.nvim",          --vscode式的自动补全框
-    "christoomey/vim-tmux-navigator", -- use "ctrl-hjkl" to switch between planes.
+    "akinsho/bufferline.nvim",         -- buffer分割线
+    "lewis6991/gitsigns.nvim",         -- 左则git提示
+    "onsails/lspkind.nvim",            --vscode式的自动补全框
+    "christoomey/vim-tmux-navigator",  -- use "ctrl-hjkl" to switch between planes.
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
