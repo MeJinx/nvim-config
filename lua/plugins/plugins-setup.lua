@@ -20,7 +20,7 @@ local plugins = {
         keys = {
             -- 👇 in this section, choose your own keymappings!
             {
-                "<leader>-",
+                "<leader>y",
                 "<cmd>Yazi<cr>",
                 desc = "Open yazi at the current file",
             },
@@ -43,7 +43,8 @@ local plugins = {
             -- if you want to open yazi instead of netrw, see below for more info
             open_for_directories = false,
             keymaps = {
-                show_help = '<f1>',
+                show_help = 'lp',
+                open_file_in_horizontal_split = '<c-h>',
             },
         },
     },
