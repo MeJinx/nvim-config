@@ -2,7 +2,7 @@ require("plugins.plugins-setup")
 require("core.options")
 require("core.keymaps")
 require("core.ui")
-
+-- 主题
 require("plugins.theme")
 -- 插件
 require("plugins.lualine")
@@ -19,3 +19,6 @@ require("plugins.lspkind")
 require("plugins.rainbow")
 require("plugins.blankline")
 require("plugins.auto_save")
+
+--start pack
+require("plugins.index")
