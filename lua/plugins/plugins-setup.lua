@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
+  "nvim-tree/nvim-web-devicons", -- 文件树图标
   "github/copilot.vim", --github copilot
   "folke/tokyonight.nvim", -- 主题
   "nvim-lualine/lualine.nvim",  -- 状态栏
