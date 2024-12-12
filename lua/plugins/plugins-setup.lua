@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  "github/copilot.vim",
+  "github/copilot.vim", --github copilot
   "folke/tokyonight.nvim", -- 主题
   "nvim-lualine/lualine.nvim",  -- 状态栏
   "nvim-tree/nvim-tree.lua",  -- 文档树
@@ -46,7 +46,25 @@ local plugins = {
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
   "onsails/lspkind.nvim", --vscode式的自动补全框
-  "christoomey/vim-tmux-navigator",
+  "christoomey/vim-tmux-navigator", -- use "ctrl-hjkl" to switch between planes.
+  {
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  },
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+   },
+  },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                              , branch = '0.1.x',
