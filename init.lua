@@ -2,6 +2,8 @@ require("plugins.plugins-setup")
 require("core.options")
 require("core.keymaps")
 require("core.ui")
+
+require("plugins.theme")
 -- 插件
 require("plugins.lualine")
 require("plugins/nvim-tree")
