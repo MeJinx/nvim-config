@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {
-        'nvimdev/dashboard-nvim',
+        'nvimdev/dashboard-nvim', --nvim的启动页
+        'jasonccox/vim-wayland-clipboard',
         event = 'VimEnter',
         config = function()
             require('dashboard').setup {

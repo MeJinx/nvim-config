@@ -12,7 +12,6 @@ local servers = {
     "rust_analyzer",
     "bashls",
     "clangd",
-    "cmake",
     "markdown_oxide",
     "pylsp",
     "pyright",
