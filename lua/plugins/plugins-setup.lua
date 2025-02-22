@@ -24,7 +24,9 @@ local plugins = {
         end,
         dependencies = { { 'nvim-tree/nvim-web-devicons' } }
     },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+    { "catppuccin/nvim",      name = "catppuccin",                                                priority = 1000 },
+
     {
         "mikavilpas/yazi.nvim",
         event = "VeryLazy",
@@ -59,6 +61,24 @@ local plugins = {
             },
         },
     },
+
+    -----------------------------------
+
+    ---debug the code.
+    "mfussenegger/nvim-dap",
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+    -- 安装 nvim-dap-telescope 插件 (集成调试与 telescope)
+    {
+        'nvim-telescope/telescope-dap.nvim',
+        dependencies = { 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap' }
+    },
+    -- Python 调试插件（可选，针对 Python 用户）
+    "mfussenegger/nvim-dap-python",
+    -- virtual-text
+    "theHamsta/nvim-dap-virtual-text",
+
+    -----------------------------------
+
     "nvim-tree/nvim-web-devicons", -- 文件树图标
     "github/copilot.vim",          --github copilot
     "nvim-lualine/lualine.nvim",   -- 状态栏

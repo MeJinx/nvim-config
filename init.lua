@@ -41,5 +41,6 @@ else
     require("plugins.auto_save")
     --start pack
     require("plugins.index")
+    require("plugins.dap.dap-init")
 end
 
