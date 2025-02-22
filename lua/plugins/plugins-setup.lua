@@ -26,7 +26,17 @@ local plugins = {
     },
 
     { "catppuccin/nvim",      name = "catppuccin",                                                priority = 1000 },
-
+    {
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+    },
     {
         "mikavilpas/yazi.nvim",
         event = "VeryLazy",
@@ -97,7 +107,7 @@ local plugins = {
     },
 
     -- 自动补全
-    "hrsh7th/nvim-cmp",
+    {"hrsh7th/nvim-cmp"},
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip", -- snippets引擎，不装这个自动补全会出问题
     "saadparwaiz1/cmp_luasnip",
