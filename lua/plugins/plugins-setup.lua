@@ -1,7 +1,7 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
-        "git",
+       "git",
         "clone",
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
@@ -56,7 +56,7 @@ local plugins = {
             {
                 -- NOTE: this requires a version of yazi that includes
                 -- https://github.com/sxyazi/yazi/pull/1305 from 2024-07-18
-                '<c-up>',
+                '<c-k>',
                 "<cmd>Yazi toggle<cr>",
                 desc = "Resume the last yazi session",
             },
@@ -89,6 +89,34 @@ local plugins = {
 
     -----------------------------------
 
+    'nvim-pack/nvim-spectre', --搜索插件
+    {
+        "folke/flash.nvim",
+        event = "VeryLazy",
+        ---@type Flash.Config
+        opts = {},
+        -- stylua: ignore
+        keys = {
+            { "/",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+            { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+            { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+            { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+            { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+            {
+                "<c-j>",
+                mode = { "n" },
+                function()
+                    require("flash").jump({
+                        search = { mode = "search", max_length = 0 },
+                        label = { after = { 0, 0 } },
+                        pattern = "^"
+                    })
+                end,
+                desc = "Toggle Flash Search"
+            },
+
+        },
+    },
     "nvim-tree/nvim-web-devicons", -- 文件树图标
     "github/copilot.vim",          --github copilot
     "nvim-lualine/lualine.nvim",   -- 状态栏
@@ -107,7 +135,7 @@ local plugins = {
     },
 
     -- 自动补全
-    {"hrsh7th/nvim-cmp"},
+    { "hrsh7th/nvim-cmp" },
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip", -- snippets引擎，不装这个自动补全会出问题
     "saadparwaiz1/cmp_luasnip",

@@ -59,21 +59,21 @@ keymap.set('n', ']d', vim.diagnostic.goto_next, vim.tbl_extend('force', opts, { 
 keymap.set('n', '<leader>q', vim.diagnostic.setloclist, vim.tbl_extend('force', opts, { desc = '设置诊断位置列表' }))
 
 
-keymap.set('n', '<leader>S', '<cmd>lua test("spectre").toggle()<CR>', {
+keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
 })
-keymap.set('n', '<leader>sw', '<cmd>lua test("spectre").open_visual({select_word=true})<CR>', {
+keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
     desc = "Search current word"
 })
-keymap.set('v', '<leader>sw', '<esc><cmd>lua test("spectre").open_visual()<CR>', {
+keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
     desc = "Search current word"
 })
-keymap.set('n', '<leader>sp', '<cmd>lua test("spectre").open_file_search({select_word=true})<CR>', {
+keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
     desc = "Search on current file"
 })
 
 -- telescope 
-local builtin = test('telescope.builtin')
+local builtin = require('telescope.builtin')
 
 --- 进入telescope页面会是插入模式，回到正常模式就可以用j和k来移动了
 keymap.set('n', '<leader>ff', builtin.find_files, { desc = '查找文件' })

@@ -11,6 +11,7 @@ require("mason").setup({
 
 local servers = {
     "lua_ls",
+    "jdtls",
     "rust_analyzer",
     "bashls",
     "clangd",
