@@ -8,7 +8,7 @@ local opts = {
 }
 
 -- ---------- 插入模式 ---------- ---
-keymap.set("i", "jk", "<ESC>") -- ---------- 退出 ---------- ---
+keymap.set("i", "jk", "<ESC>") 
 keymap.set("n", "qq", ":q<CR>")
 keymap.set("n", "qw", ":wq<CR>")
 
@@ -51,14 +51,29 @@ keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, vim.tbl_extend('force', o
 keymap.set("n", "<leader>=", function()
     vim.lsp.buf.format({ async = true })
 end, vim.tbl_extend('force', opts, { desc = '格式化代码' }))
+
 -- 诊断相关快捷键
 keymap.set('n', '<leader>fl', vim.diagnostic.open_float, vim.tbl_extend('force', opts, { desc = '打开诊断浮动窗口' }))
 keymap.set('n', '[d', vim.diagnostic.goto_prev, vim.tbl_extend('force', opts, { desc = '跳转到上一个诊断' }))
 keymap.set('n', ']d', vim.diagnostic.goto_next, vim.tbl_extend('force', opts, { desc = '跳转到下一个诊断' }))
 keymap.set('n', '<leader>q', vim.diagnostic.setloclist, vim.tbl_extend('force', opts, { desc = '设置诊断位置列表' }))
 
+
+keymap.set('n', '<leader>S', '<cmd>lua test("spectre").toggle()<CR>', {
+    desc = "Toggle Spectre"
+})
+keymap.set('n', '<leader>sw', '<cmd>lua test("spectre").open_visual({select_word=true})<CR>', {
+    desc = "Search current word"
+})
+keymap.set('v', '<leader>sw', '<esc><cmd>lua test("spectre").open_visual()<CR>', {
+    desc = "Search current word"
+})
+keymap.set('n', '<leader>sp', '<cmd>lua test("spectre").open_file_search({select_word=true})<CR>', {
+    desc = "Search on current file"
+})
+
 -- telescope 
-local builtin = require('telescope.builtin')
+local builtin = test('telescope.builtin')
 
 --- 进入telescope页面会是插入模式，回到正常模式就可以用j和k来移动了
 keymap.set('n', '<leader>ff', builtin.find_files, { desc = '查找文件' })
